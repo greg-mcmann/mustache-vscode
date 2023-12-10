@@ -1,0 +1,114 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Mustache",
+	"scopeName": "text.plain.mustache",
+	"patterns": [
+		{
+			"begin": "{{!",
+			"end": "}}",
+			"name": "comment.mustache"
+		},
+		{
+			"name": "meta.tag.block.mustache",
+			"match": "({{)(\\$)(.+?)(}})",
+			"captures": {
+				"1": { "name": "punctuation.definition.tag.begin.mustache" },
+				"2": { "name": "entity.name.tag.mustache" },
+				"3": { "name": "entity.other.attribute-name.mustache" },
+				"4": { "name": "punctuation.definition.tag.end.mustache" }
+			}
+		},
+		{
+			"name": "meta.tag.close.mustache",
+			"match": "({{)(/)(.+?)(}})",
+			"captures": {
+				"1": { "name": "punctuation.definition.tag.begin.mustache" },
+				"2": { "name": "entity.name.tag.mustache" },
+				"3": { "name": "entity.other.attribute-name.mustache" },
+				"4": { "name": "punctuation.definition.tag.end.mustache" }
+			}
+		},
+		{
+			"name": "meta.tag.delimiter.mustache",
+			"match": "({{)(=)(.*)\\s+?(.*)(=)(}})",
+			"captures": {
+				"1": { "name": "punctuation.definition.tag.begin.mustache" },
+				"2": { "name": "entity.name.tag.mustache" },
+				"3": { "name": "constant.character.mustache" },
+				"4": { "name": "constant.character.mustache" },
+				"5": { "name": "entity.name.tag.section.mustache" },
+				"6": { "name": "punctuation.definition.tag.end.mustache" }
+			}
+		},
+		{
+			"name": "meta.tag.inverted.mustache",
+			"match": "({{)(\\^)(.+?)(}})",
+			"captures": {
+				"1": { "name": "punctuation.definition.tag.begin.mustache" },
+				"2": { "name": "entity.name.tag.mustache" },
+				"3": { "name": "entity.other.attribute-name.mustache" },
+				"4": { "name": "punctuation.definition.tag.end.mustache" }
+			}
+		},
+		{
+			"name": "meta.tag.parent.mustache",
+			"match": "({{)(<)(.+?)(}})",
+			"captures": {
+				"1": { "name": "punctuation.definition.tag.begin.mustache" },
+				"2": { "name": "entity.name.tag.mustache" },
+				"3": { "name": "entity.other.attribute-name.mustache" },
+				"4": { "name": "punctuation.definition.tag.end.mustache" }
+			}
+		},
+		{
+			"name": "meta.tag.partial.mustache",
+			"match": "({{)(>)(.+?)(}})",
+			"captures": {
+				"1": { "name": "punctuation.definition.tag.begin.mustache" },
+				"2": { "name": "entity.name.tag.mustache" },
+				"3": { "name": "entity.other.attribute-name.mustache" },
+				"4": { "name": "punctuation.definition.tag.end.mustache" }
+			}
+		},
+		{
+			"name": "meta.tag.section.mustache",
+			"match": "({{)(#)(.+?)(}})",
+			"captures": {
+				"1": { "name": "punctuation.definition.tag.begin.mustache" },
+				"2": { "name": "entity.name.tag.mustache" },
+				"3": { "name": "entity.other.attribute-name.mustache" },
+				"4": { "name": "punctuation.definition.tag.end.mustache" }
+			}
+		},
+		{
+			"name": "meta.tag.unescaped.ampersand.mustache",
+			"match": "({{)(&)(.+?)(}})",
+			"captures": {
+				"1": { "name": "punctuation.definition.tag.begin.mustache" },
+				"2": { "name": "entity.name.tag.mustache" },
+				"3": { "name": "entity.other.attribute-name.mustache" },
+				"4": { "name": "punctuation.definition.tag.end.mustache" }
+			}
+		},
+		{
+			"name": "meta.tag.unescaped.brackets.mustache",
+			"match": "({{)({)(.+?)(})(}})",
+			"captures": {
+				"1": { "name": "punctuation.definition.tag.begin.mustache" },
+				"2": { "name": "entity.name.tag.mustache" },
+				"3": { "name": "entity.other.attribute-name.mustache" },
+				"4": { "name": "entity.name.tag.mustache" },
+				"5": { "name": "punctuation.definition.tag.end.mustache" }
+			}
+		},
+		{
+			"name": "meta.tag.escaped.mustache",
+			"match": "({{)(.+?)(}})",
+			"captures": {
+				"1": { "name": "punctuation.definition.tag.begin.mustache" },
+				"2": { "name": "entity.other.attribute-name.mustache" },
+				"3": { "name": "punctuation.definition.tag.end.mustache" }
+			}
+		}
+	]
+}

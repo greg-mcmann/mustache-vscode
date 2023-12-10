@@ -1,0 +1,25 @@
+{
+  "name": "mustache-syntax",
+  "displayName": "Mustache",
+  "description": "Mustache language support for Visual Studio Code",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "mustache",
+      "aliases": ["Mustache", "mustache"],
+      "extensions": [".mustache"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "mustache",
+      "scopeName": "text.plain.mustache",
+      "path": "./syntaxes/mustache.tmLanguage.json"
+    }]
+  }
+}
