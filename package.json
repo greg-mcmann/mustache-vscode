@@ -1,16 +1,18 @@
 {
-  "name": "mustache-syntax",
-  "displayName": "Mustache",
+  "name": "mustache-language",
+  "version": "1.0.0",
+  "publisher": "gmcmann",
+  "displayName": "Mustache Language",
   "description": "Mustache language support for Visual Studio Code",
   "license": "MIT",
-  "version": "1.0.0",
   "readme": "README.md",
   "icon": "media/icon.png",
   "keywords": [
     "mustache",
     "language",
     "grammar",
-    "syntax"
+    "syntax",
+    "template"
   ],
   "engines": {
     "vscode": "^1.84.0"
