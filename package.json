@@ -2,6 +2,7 @@
   "name": "mustache-syntax",
   "displayName": "Mustache",
   "description": "Mustache language support for Visual Studio Code",
+  "icon": "media/icon.png",
   "version": "1.0.0",
   "engines": {
     "vscode": "^1.84.0"
