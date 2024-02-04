@@ -14,3 +14,13 @@ While there are already multiple extensions providing Mustache language support 
 * Scopes the pieces of each Mustache tag separately for quick recognition.
 * Toggles comments with the built-in shortcut keys `CMD + /` or `CTRL + /`.
 * Automatically closes opening curly brackets `{` as you type.
+
+## Troubleshooting
+
+If after installing this extension, the curly braces are rainbow colors, and don't look like the preview picture above, it is likely because you have bracket pair colorization enabled. You can disable this for mustache files only by adding the following to settings.json:
+
+```json
+  "[mustache]": {
+    "editor.bracketPairColorization.enabled": false
+  },
+```
